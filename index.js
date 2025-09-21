@@ -16,7 +16,7 @@ const uri = process.env.MONGO_URI;
 const app = express();
 
 // --- Middleware Setup ---
-const allowedOrigins = ["https://dashboardzerodha-1.onrender.com", "http://localhost:5174","https://backendzerodha-3xet.onrender.com"];
+const allowedOrigins = ["https://dashboardzerodha-1.onrender.com", "https://frontendzerodhaclone-1.onrender.com","https://backendzerodha-3xet.onrender.com"];
 
 app.use(
   cors({
