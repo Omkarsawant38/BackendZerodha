@@ -16,7 +16,7 @@ const uri = process.env.MONGO_URI;
 const app = express();
 
 // --- Middleware Setup ---
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174","http://localhost:3000"];
+const allowedOrigins = ["https://dashboardzerodha-1.onrender.com", "http://localhost:5174","https://backendzerodha-3xet.onrender.com"];
 
 app.use(
   cors({
@@ -162,9 +162,9 @@ const startServer = async () => {
     await mongoose.connect(uri);
     console.log("✅ Connected to MongoDB!");
 
-    app.listen(port, () => {
-      console.log(`🚀 Server is running on port ${port}`);
-    });
+    app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Server is running on port ${port}`);
+});
   } catch (error) {
     console.error("❌ MongoDB connection error:", error);
     process.exit(1); // Exit the process with an error code
